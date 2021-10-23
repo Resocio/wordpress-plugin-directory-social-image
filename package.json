@@ -1,0 +1,22 @@
+{
+  "name": "wordpress-plugin-directory-social-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Resocio/wordpress-plugin-directory-social-image.git"
+  },
+  "author": "Philippe Bernard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Resocio/wordpress-plugin-directory-social-image/issues"
+  },
+  "homepage": "https://github.com/Resocio/wordpress-plugin-directory-social-image#readme",
+  "devDependencies": {
+    "@resoc/netlify-plugin-social-image": "0.0.6"
+  }
+}
