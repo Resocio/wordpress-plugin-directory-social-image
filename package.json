@@ -17,10 +17,7 @@
   },
   "homepage": "https://github.com/Resocio/wordpress-plugin-directory-social-image#readme",
   "devDependencies": {
-    "@resoc/netlify-plugin-social-image": "0.0.7",
+    "@resoc/netlify-plugin-social-image": "0.0.8",
     "fs-extra": "^10.0.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.0.0"
   }
 }
