@@ -56,6 +56,6 @@ const getPluginData = async (slug) => {
   }
 }
 
-exports.slugToImageData = async (slug) => {
-  await getPluginData(slug);
-}
+exports.slugToImageData = async (slug) => (
+  await getPluginData(slug)
+);
