@@ -34,6 +34,7 @@ const getJSON = async (options) => {
 };
 
 const getPluginData = async (slug) => {
+  console.log(`Plugin ${slug}`);
   const response = await getJSON({
     host: 'api.wordpress.org',
     port: 443,
@@ -43,6 +44,8 @@ const getPluginData = async (slug) => {
       'Content-Type': 'application/json'
     }
   });
+
+  console.log("Raw plugin data:", response);
 
   return {
     template: 'plugin',
