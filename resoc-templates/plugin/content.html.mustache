@@ -3,20 +3,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 
 <div class="wrapper">
-  <h1 id="title">
-    {{ title }}
-  </h1>
-  <div id="footer">
-    <h2 id="description">
-      {{ description }}
-    </h2>
-    <img id="logo" src="logo.png" />
+  <main>
+    <div class="project">
+      <p class="title">
+        {{ name }}</span>
+      </p>
+      <p class="description">
+        {{ description }}
+      </p>
+    </div>
+    <div class="pic">
+      <img src="{{ logoUrl }}" />
+    </div>
+  </main>
+
+  <div class="secondary">
+    <div class="metrics">
+      <div class="metric">
+        <img src="rating.png" />
+        <div>
+          <p class="metric-data">{{ rating }}</p>
+          <p class="metric-label">Rating</p>
+        </div>
+      </div>
+
+      <div class="metric">
+        <img src="installs.png" />
+        <div>
+          <p class="metric-data">{{ installs }}</p>
+          <p class="metric-label">Installs</p>
+        </div>
+      </div>
+
+      <div class="metric">
+        <img src="locales.png" />
+        <div>
+          <p class="metric-data">{{ locales }}</p>
+          <p class="metric-label">Locales</p>
+        </div>
+      </div>
+
+      <div class="metric">
+        <img src="contributors.png" />
+        <div>
+          <p class="metric-data">{{ contributors }}</p>
+          <p class="metric-label">Contributors</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wordpress-logo">
+      <img src="wordpress.svg" />
+    </div>
   </div>
+
+  <div class="techs"></div>
 </div>
 
-<script src="textFit.js"></script>
 <script>
-  window.onload = function() {
-    textFit(document.getElementById('title'), { maxFontSize: 500, multiLine: true });
-  };
+  var formatter = Intl.NumberFormat('en', { notation: 'compact' });
+  var data = document.querySelectorAll(".metric-data");
+  for (var i = 0; i < data.length; i++) {
+    data[i].innerHTML = formatter.format(data[i].innerHTML);
+  }
 </script>

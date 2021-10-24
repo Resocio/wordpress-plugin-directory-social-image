@@ -5,14 +5,40 @@
   },
   "parameters": [
     {
-      "name": "title",
+      "name": "name",
       "type": "text",
-      "demoValue": "A picture is worth a thousand words"
+      "demoValue": "GiveWP – Donation Plugin and Fundraising Platform"
     },
     {
       "name": "description",
       "type": "text",
-      "demoValue": "And so much to say!"
+      "demoValue": "Accept donations and begin fundraising with GiveWP, the highest rated WordPress donation plugin for online giving."
+    },
+    {
+      "label": "Logo",
+      "name": "logoUrl",
+      "type": "imageUrl",
+      "demoValue": "https://ps.w.org/give/assets/icon-256x256.jpg?rev=2407987"
+    },
+    {
+      "name": "contributors",
+      "type": "number",
+      "demoValue": "13"
+    },
+    {
+      "name": "locales",
+      "type": "number",
+      "demoValue": "20"
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "demoValue": "4.8"
+    },
+    {
+      "name": "installs",
+      "type": "number",
+      "demoValue": "100000"
     }
   ]
 }
