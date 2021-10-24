@@ -6,7 +6,7 @@
   <main>
     <div class="project">
       <p class="title">
-        {{ name }}</span>
+        {{{ name }}}</span>
       </p>
       <p class="description">
         {{ description }}
@@ -30,7 +30,7 @@
       <div class="metric">
         <img src="installs.png" />
         <div>
-          <p class="metric-data">{{ installs }}</p>
+          <p class="metric-data"><span class="big-number">{{ installs }}</span>+</p>
           <p class="metric-label">Installs</p>
         </div>
       </div>
@@ -38,7 +38,7 @@
       <div class="metric">
         <img src="locales.png" />
         <div>
-          <p class="metric-data">{{ locales }}</p>
+          <p class="metric-data"><span class="big-number">{{ locales }}</span></p>
           <p class="metric-label">Locales</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
       <div class="metric">
         <img src="contributors.png" />
         <div>
-          <p class="metric-data">{{ contributors }}</p>
+          <p class="metric-data"><span class="big-number">{{ contributors }}</span></p>
           <p class="metric-label">Contributors</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
 
 <script>
   var formatter = Intl.NumberFormat('en', { notation: 'compact' });
-  var data = document.querySelectorAll(".metric-data");
+  var data = document.querySelectorAll(".big-number");
   for (var i = 0; i < data.length; i++) {
     data[i].innerHTML = formatter.format(data[i].innerHTML);
   }
