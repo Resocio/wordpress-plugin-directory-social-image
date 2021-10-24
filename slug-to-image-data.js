@@ -57,7 +57,7 @@ const getPluginData = async (slug) => {
   return {
     template: 'plugin',
     values: {
-      title: plugin.name,
+      name: plugin.name,
       description: shortDescription,
       logoUrl,
       contributors: plugin.contributors.length,
