@@ -1,3 +1,8 @@
+// Quick and dirty code to get plugin data
+// Due to the WordPress API, three API calls are necessary
+/// to gather all data. Would WordPress implement this itself,
+// it would probably use a dedicated entry point.
+
 const https = require('https');
 
 const wordPressApiRequest = async (path) => {
