@@ -54,8 +54,15 @@ const getPluginData = async (slug) => {
   search.plugins.forEach(p => {
     if (p.slug === slug) {
       shortDescription = p.short_description;
-      logoUrl = p.icons['1x'];
       installs = p.active_installs;
+
+      // Get a PNG or JPG icon
+      const icons = Object.values(p.icons);
+      for (const icon of icons) {
+        if (icon.match('png') || icon.match('jpe?g')) {
+          logoUrl = icon;
+        }
+      }
     }
   })
 
